@@ -13,7 +13,7 @@
           <input type="text" placeholder="必填；例如：3.0" />
         </div>
       </div>
-     
+
       <div class="item">
         <div class="item-top">
           <span></span>
@@ -21,7 +21,7 @@
           <h4>(雅思成绩)</h4>
         </div>
         <div class="item-inp">
-          <input type="text" placeholder="必填；例如：3.0" />
+          <input type="text" placeholder="必填；例如：7.5" />
         </div>
       </div>
       <div class="item">
@@ -31,35 +31,47 @@
           <h4>(托福成绩)</h4>
         </div>
         <div class="item-inp">
-          <input type="text" placeholder="必填；例如：3.0" />
+          <input type="text" placeholder="例如：110" />
         </div>
       </div>
       <div class="item">
         <div class="item-top">
           <span></span>
           <h3>PTE成绩</h3>
-          <h4>()</h4>
+          <h4>(培生学术英语成绩)</h4>
         </div>
         <div class="item-inp">
-          <input type="text" placeholder="必填；例如：3.0" />
+          <input type="text" placeholder="例如：80" />
         </div>
       </div>
-       <div class="item">
+      <div class="item">
         <div class="item-top">
           <span></span>
-          <h3>GPA成绩</h3>
-          <h4>(平均学分成绩)</h4>
+          <h3>Duolingo成绩</h3>
+          <h4>(多邻国成绩)</h4>
         </div>
         <div class="item-inp">
-          <input type="text" placeholder="必填；例如：3.0" />
+          <input type="text" placeholder="例如：130" />
         </div>
+      </div>
+      <div class="bottom">
+        <div class="btn" @click="getData">获取匹配结果</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+    data(){
+        return {}
+    },
+    methods:{
+        getData(){
+            this.$router.push('/List')
+        }
+    }
+};
 </script>
 
 <style scoped>
@@ -83,22 +95,24 @@ export default {};
   padding-top: 2rem;
 }
 .info {
+    padding-bottom: 3rem;
   margin-top: 1rem;
   background-color: #ffffff;
-  box-shadow: 0px 0px 15px 0px rgba(93, 200, 182, 0.3);
-  border-radius: 0px 75px 0px 0px;
-  border: solid 1px #f8f8f8;
+  box-shadow: 0px 0px 1.5rem 0px rgba(93, 200, 182, 0.3);
+  border-radius: 0px 7.5rem 0px 0px;
+  border: solid 0.1rem #f8f8f8;
+  border-bottom: none;
 }
 .item {
   width: 24.1rem;
   margin: 0 auto;
   padding-top: 2rem;
 }
-.item:first-child{
-    padding-top: 0;
+.item:first-child {
+  padding-top: 0;
 }
 .item-top {
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 .item-top span {
   display: inline-block;
@@ -126,22 +140,42 @@ export default {};
   line-height: 1.8rem;
   letter-spacing: 0rem;
   color: #999999;
-  
 }
 .item-inp {
 }
 .item-inp input {
+  width: 24rem;
+  height: 4rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  border: solid 0.1rem #b7cbc8;
+  padding-left: 1.6rem;
+  box-sizing: border-box;
+  outline: none;
+}
+.item-inp input::-webkit-input-placeholder {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #999;
+}
+.bottom {
+    padding-top: 3rem;
+}
+.bottom .btn{
+    font-size: 1.5rem;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 1.8rem;
+	letter-spacing: 0px;
+	color: #ffffff;
     width: 24rem;
 	height: 4rem;
-	background-color: #ffffff;
-	border-radius: .5rem;
-	border: solid .1rem #b7cbc8;
-    padding-left: 1.6rem;
-    box-sizing: border-box;
+	background-color: #5dc8b6;
+	box-shadow: 0px 0px 1rem 0px 
+		rgba(93, 200, 182, 0.3);
+	border-radius: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 4rem;
 }
- .item-inp  input::-webkit-input-placeholder {
-     font-size: 1.2rem;
-     line-height: 1.8rem;
-     color: #999;
- }
 </style>

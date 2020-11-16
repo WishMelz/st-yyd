@@ -10,6 +10,7 @@
 
 <style>
 #app {
+   height: 100%;
   font-family: "微软雅黑";
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
@@ -19,9 +20,19 @@
 body,html {
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 h1,h2,h3,h4,h5{
   padding: 0;
   margin: 0;
+}
+.return {
+  position: fixed;
+  top: 2.9rem;
+  left: 2rem;;
+}
+.return img {
+  width: 2.7rem;
+  height: 2.7rem;
 }
 </style>
