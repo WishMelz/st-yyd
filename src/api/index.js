@@ -1,11 +1,11 @@
 import axios from 'axios'
 
 // 创建一个 axios 实例
-const service = axios.create({
-    baseURL: process.env.VUE_APP_API,
-    timeout: 5000 // 请求超时时间
-})
-
+// const service = axios.create({
+//     baseURL: process.env.VUE_APP_API,
+//     timeout: 5000 // 请求超时时间
+// })
+axios.defaults.baseURL = "http://127.0.0.1:51413/api/";
 
 // // 请求拦截器
 // service.interceptors.request.use(
@@ -37,7 +37,7 @@ service.interceptors.response.use(
         } else {
             // 有 code 代表这是一个后端接口 可以进行进一步的判断
           switch (code) {
-            case '100000':
+            case '200':
               // [ 示例 ] code === 0 代表没有错误
               return dataAxios.data
             default:
