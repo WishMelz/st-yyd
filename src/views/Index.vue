@@ -80,8 +80,6 @@ export default {
   background: url(../assets/shouye.png);
   background-size: cover;
 }
-.idnex {
-}
 .info h2 {
   font-size: 1.5rem;
   font-weight: normal;
@@ -140,8 +138,6 @@ export default {
   line-height: 1.8rem;
   letter-spacing: 0rem;
   color: #999999;
-}
-.item-inp {
 }
 .item-inp input {
   width: 24rem;

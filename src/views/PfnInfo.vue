@@ -229,8 +229,6 @@ export default {
   width: 32.8rem;
   margin: 0 auto;
 }
-.mark-title {
-}
 .mark-title span {
   display: inline-block;
   width: 0.4rem;
