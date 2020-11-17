@@ -5,12 +5,12 @@
     <div class="info">
       <div class="item">
         <div class="item-rank">
-          <img src="../assets/ranks.png" alt="" />
+          <img src="../assets/rank1.png" alt="" />
           <span class="item-rank_num">2</span>
         </div>
         <div class="item-rank_qs">5</div>
         <div class="avarat">
-          <img src="" alt="" />
+          <img src="https://dummyimage.com/75x75/cccccc" alt="" />
         </div>
         <div class="item-info">
           <div class="item-info_name">牛津大学</div>
@@ -28,7 +28,7 @@
         </div>
         <div class="item-rank_qs">5</div>
         <div class="avarat">
-          <img src="" alt="" />
+          <img src="https://dummyimage.com/75x75/cccccc" alt="" />
         </div>
         <div class="item-info">
           <div class="item-info_name">牛津大学</div>
@@ -117,6 +117,12 @@ export default {
   box-shadow: 0px 0.5rem 0.5rem 0px rgba(4, 17, 43, 0.2);
   border-radius: 50%;
 }
+.avarat img {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+
+}
 .item-info {
   float: left;
   padding-left: 1.5rem;
@@ -131,8 +137,7 @@ export default {
   font-size: 1.3rem;
   color: #999;
 }
-.item-info_position {
-}
+
 .item-info_position i {
   display: inline-block;
   width: 1rem;
@@ -151,7 +156,7 @@ export default {
   height: 4rem;
   position: absolute;
   top: 0;
-  left: 24px;
+  left: 2.4rem;
 }
 .item-rank img {
   width: 3rem;
