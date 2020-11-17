@@ -1,5 +1,10 @@
 <template>
   <div class="match">
+    <div class="mark">
+    <div class="title">
+      <h2>个人描述：</h2>
+      <h3>(请输入描述，我们会通过AI算法协助您选择专业）</h3>
+    </div>
     <div class="info">
       <textarea
         placeholder="输入一句话描述自己的品格性格或
@@ -9,6 +14,7 @@
 以后想当医生。"
       ></textarea>
       <div class="btn" @click="match">匹配结果</div>
+    </div>
     </div>
     <div class="loading" v-if="loading">
       <div class="loading-info">
@@ -54,12 +60,31 @@ export default {
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-.info {
+.mark {
   position: absolute;
-  top: 18.4rem;
+  top: 15.4rem;
   left: 50%;
   transform: translateX(-50%);
+}
+.title h2 {
+  font-size: 1.4rem;
+ 
+}
+.title h3 {
+  font-size: 1.2rem;
+}
+.title {
+   color: #5dc8b6;
+  font-weight: 700;
+  padding-bottom: .8rem;
+  padding-left: 4.8rem;
+}
+.info {
   text-align: center;
+  width: 31rem;
+  background: #fff;
+  border-radius: 7rem;
+  padding: 2.2rem;
 }
 .info textarea {
   width: 21.9rem;
@@ -103,6 +128,9 @@ export default {
   background-color: #000000;
   border-radius: 0.5rem;
   opacity: 0.5;
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
+
 }
 .loading-info p {
   color: #fff;
