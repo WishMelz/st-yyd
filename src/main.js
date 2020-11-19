@@ -5,8 +5,10 @@ import store from './store'
 import axios from './api/index'
 import Loading from '@/components/Loading';
 import Rank from '@/components/Rank';
+import Button from '@/components/Button';
 Vue.component('loading',Loading)
 Vue.component('rank',Rank)
+Vue.component('vbutton',Button)
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false
 

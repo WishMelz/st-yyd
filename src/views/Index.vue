@@ -55,8 +55,10 @@
         </div>
       </div>
       <div class="bottom">
+        <!-- <vbutton :options="options"  @click.native="getData"></vbutton> -->
         <div class="btn" @click="getData">获取匹配结果</div>
       </div>
+      
     </div>
     <loading v-if="canLoading"></loading>
   </div>
@@ -66,6 +68,12 @@
 export default {
   data() {
     return {
+      options:{
+        width:"24rem",
+        height:"4rem",
+        fs:"1.5rem",
+        title:"获取匹配结果"
+      },
       canLoading: false,
       data: {
         gpa: "",
@@ -180,6 +188,7 @@ export default {
 }
 .bottom {
   padding-top: 3rem;
+  text-align: center;
 }
 .bottom .btn {
   font-size: 1.5rem;
