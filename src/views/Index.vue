@@ -68,6 +68,9 @@ export default {
     },
     methods:{
         getData(){
+            let tar = /^\d+(\.\d+)?$/
+            let aa = '120'
+            console.log(tar.test(aa));
             this.$router.push('/List')
         }
     }
