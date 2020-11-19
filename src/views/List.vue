@@ -5,8 +5,7 @@
     <div class="info">
       <div class="item">
         <div class="item-rank">
-          <img src="../assets/rank1.png" alt="" />
-          <span class="item-rank_num">2</span>
+          <rank :rank="1"></rank>
         </div>
         <div class="item-rank_qs">5</div>
         <div class="avarat">
@@ -23,8 +22,7 @@
       </div>
       <div class="item" @click="goListInfo()">
         <div class="item-rank">
-          <img src="../assets/ranks.png" alt="" />
-          <span class="item-rank_num">2</span>
+          <rank :rank="5"></rank>
         </div>
         <div class="item-rank_qs">5</div>
         <div class="avarat">
@@ -159,24 +157,9 @@ export default {
   padding-left: 0.2rem;
 }
 .item-rank {
-  width: 3rem;
-  height: 4rem;
   position: absolute;
   top: 0;
   left: 2.4rem;
-}
-.item-rank img {
-  width: 3rem;
-  height: 4rem;
-}
-.item-rank_num {
-  font-size: 1.5rem;
-  color: #fff;
-  position: absolute;
-  bottom: 0.5rem;
-  left: 0;
-  width: 100%;
-  text-align: center;
 }
 .item-rank_qs {
   position: absolute;

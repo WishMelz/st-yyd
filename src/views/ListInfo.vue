@@ -39,8 +39,7 @@
       </div>
       <div class="info-item clearfix">
         <div class="item-rank">
-          <img src="../assets/rank1.png" alt="" />
-          <!-- <span class="item-rank_num">2</span> -->
+         <rank :rank="1"></rank>
         </div>
           <div class="item-icon">
             <img src="../assets/xxzy.png" alt="">
@@ -55,8 +54,7 @@
       </div>
       <div class="info-item clearfix">
         <div class="item-rank">
-          <img src="../assets/rank1.png" alt="" />
-          <!-- <span class="item-rank_num">2</span> -->
+          <rank :rank="5"></rank>
         </div>
           <div class="item-icon">
             <img src="../assets/xxzy.png" alt="">
@@ -249,24 +247,9 @@ export default {
   height: 1.8rem;
 }
 .item-rank {
-   width: 3rem;
-  height: 4rem;
   position: absolute;
   top: 0;
   left: 1.5rem;
-}
-.item-rank img{
-  width: 3rem;
-  height: 4rem;
-}
-.item-rank_num{
-    font-size: 1.5rem;
-  color: #fff;
-  position: absolute;
-  bottom: 0.5rem;
-  left: 0;
-  width: 100%;
-  text-align: center;
 }
 .item-text {
   float: left;

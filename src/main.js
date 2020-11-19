@@ -4,7 +4,9 @@ import router from './router'
 import store from './store'
 import axios from './api/index'
 import Loading from '@/components/Loading';
+import Rank from '@/components/Rank';
 Vue.component('loading',Loading)
+Vue.component('rank',Rank)
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false
 
