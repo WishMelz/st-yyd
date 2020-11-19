@@ -12,6 +12,7 @@
 #app {
    height: 100%;
   font-family: "微软雅黑";
+  width: 100%;
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   /* text-align: center;
@@ -29,7 +30,7 @@ h1,h2,h3,h4,h5,p{
   margin: 0;
 }
 .return {
-  position: fixed;
+  position: absolute;
   top: 2.9rem;
   left: 2rem;;
 }

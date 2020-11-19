@@ -155,7 +155,7 @@ export default {
   padding: 0rem 0 0 1rem;
 }
 .index-title {
-  position: fixed;
+  position: absolute;
   top: 2.9rem;
   left: 50%;
   transform: translateX(-50%);

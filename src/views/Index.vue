@@ -10,7 +10,7 @@
           <h4>(平均学分成绩)</h4>
         </div>
         <div class="item-inp">
-          <input type="text" placeholder="必填；例如：3.0" />
+          <input type="text" v-model="data.gpa" placeholder="必填；例如：3.0" />
         </div>
       </div>
 
@@ -64,13 +64,25 @@
 <script>
 export default {
     data(){
-        return {}
+        return {
+          data:{
+            gpa:"",
+            ielts:"",
+            tofel:"",
+            pte:"",
+            duolingo:""
+          }
+        }
     },
     methods:{
         getData(){
             let tar = /^\d+(\.\d+)?$/
             let aa = '120'
-            console.log(tar.test(aa));
+            // console.log(tar.test(this.data.gpa));
+            this.$axios.get('https://api.itse.ml:8901/music')
+            .then(res=>{
+              console.log(res);
+            })
             this.$router.push('/List')
         }
     }

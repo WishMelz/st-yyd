@@ -5,7 +5,7 @@ import axios from 'axios'
 //     baseURL: process.env.VUE_APP_API,
 //     timeout: 5000 // 请求超时时间
 // })
-axios.defaults.baseURL = "http://127.0.0.1:51413/api/";
+// axios.defaults.baseURL = "http://127.0.0.1:51413/api/";
 
 // // 请求拦截器
 // service.interceptors.request.use(
@@ -24,7 +24,7 @@ axios.defaults.baseURL = "http://127.0.0.1:51413/api/";
 // )
 
 // 响应拦截器
-service.interceptors.response.use(
+axios.interceptors.response.use(
     response => {
         // dataAxios 是 axios 返回数据中的 data
         const dataAxios = response.data
@@ -92,7 +92,7 @@ service.interceptors.response.use(
     }
 )
 
-export default service
+export default axios
 
 
 
