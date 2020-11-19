@@ -87,15 +87,18 @@
     </div>
     <div class="fy" v-if="isfy">
       <h2>翻译</h2>
-      <p> 一百年前，一位伟大的美国人签署了《解放黑奴宣
-言》，今天我们就是在他的雕像前集会。这一庄严
-宣言犹如灯塔的光芒，给千百万在那摧残生命的不
-义之火中受煎熬的黑奴带来了希望。它之到来犹如
-欢乐的黎明，结束了束缚黑人的漫长之夜。</p>
+      <p>
+        一百年前，一位伟大的美国人签署了《解放黑奴宣
+        言》，今天我们就是在他的雕像前集会。这一庄严
+        宣言犹如灯塔的光芒，给千百万在那摧残生命的不
+        义之火中受煎熬的黑奴带来了希望。它之到来犹如
+        欢乐的黎明，结束了束缚黑人的漫长之夜。
+      </p>
     </div>
     <div class="return" @click="routerReturn">
       <img src="../assets/fanhui.png" alt="" />
     </div>
+    <loading v-if="canLoading"></loading>
   </div>
 </template>
 
@@ -104,6 +107,7 @@ export default {
   data() {
     return {
       isfy: false,
+      canLoading: false,
     };
   },
   methods: {
@@ -252,7 +256,7 @@ export default {
   color: #666;
 }
 .btn {
-  padding-top: 2rem;;
+  padding-top: 2rem;
 }
 .btn div {
   width: 15rem;
@@ -272,10 +276,10 @@ export default {
 .fy h2 {
   font-size: 1.5rem;
   color: #333;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 .fy p {
-   font-size: 1.4rem;
-     color: #666;
+  font-size: 1.4rem;
+  color: #666;
 }
 </style>

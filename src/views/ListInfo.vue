@@ -74,6 +74,7 @@
     <div class="return" @click="routerReturn">
       <img src="../assets/fanhui.png" alt="" />
     </div>
+     <loading v-if="canLoading"></loading>
   </div>
 </template>
 
@@ -83,6 +84,7 @@ export default {
     return {
       isAll: false,
       isAllText: "全部",
+      canLoading:false
     };
   },
   methods: {

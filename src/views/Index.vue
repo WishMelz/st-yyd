@@ -58,34 +58,43 @@
         <div class="btn" @click="getData">获取匹配结果</div>
       </div>
     </div>
+    <loading v-if="canLoading"></loading>
   </div>
 </template>
 
 <script>
 export default {
-    data(){
-        return {
-          data:{
-            gpa:"",
-            ielts:"",
-            tofel:"",
-            pte:"",
-            duolingo:""
-          }
-        }
+  data() {
+    return {
+      canLoading: false,
+      data: {
+        gpa: "",
+        ielts: "",
+        tofel: "",
+        pte: "",
+        duolingo: "",
+      },
+    };
+  },
+  methods: {
+    getData() {
+      this.canLoading = true;
+      let tar = /^\d+(\.\d+)?$/;
+      let aa = "120";
+      // console.log(tar.test(this.data.gpa));
+      this.$axios.get("https://api.itse.ml:8901/music").then((res) => {
+        console.log(res);
+        this.$router.push({
+          path: "/List",
+          query: {
+            name: "tom",
+            age: 12,
+            res,
+          },
+        });
+      });
     },
-    methods:{
-        getData(){
-            let tar = /^\d+(\.\d+)?$/
-            let aa = '120'
-            // console.log(tar.test(this.data.gpa));
-            this.$axios.get('https://api.itse.ml:8901/music')
-            .then(res=>{
-              console.log(res);
-            })
-            this.$router.push('/List')
-        }
-    }
+  },
 };
 </script>
 
@@ -108,7 +117,7 @@ export default {
   padding-top: 2rem;
 }
 .info {
-    padding-bottom: 3rem;
+  padding-bottom: 3rem;
   margin-top: 1rem;
   background-color: #ffffff;
   box-shadow: 0px 0px 1.5rem 0px rgba(93, 200, 182, 0.3);
@@ -170,23 +179,22 @@ export default {
   color: #999;
 }
 .bottom {
-    padding-top: 3rem;
+  padding-top: 3rem;
 }
-.bottom .btn{
-    font-size: 1.5rem;
-	font-weight: normal;
-	font-stretch: normal;
-	line-height: 1.8rem;
-	letter-spacing: 0px;
-	color: #ffffff;
-    width: 24rem;
-	height: 4rem;
-	background-color: #5dc8b6;
-	box-shadow: 0px 0px 1rem 0px 
-		rgba(93, 200, 182, 0.3);
-	border-radius: 2rem;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 4rem;
+.bottom .btn {
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.8rem;
+  letter-spacing: 0px;
+  color: #ffffff;
+  width: 24rem;
+  height: 4rem;
+  background-color: #5dc8b6;
+  box-shadow: 0px 0px 1rem 0px rgba(93, 200, 182, 0.3);
+  border-radius: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 4rem;
 }
 </style>

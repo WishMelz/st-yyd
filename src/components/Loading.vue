@@ -1,57 +1,41 @@
 <template>
-  <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-    <router-view />
+  <div class="loading">
+    <div class="loading-info">
+      <p>{{title}}</p>
+      <div class="loading-img">
+        <img src="../assets/loading.png" alt="" />
+      </div>
+      <div v-if="canSubTitle" class="loading-msg">{{subTitle}}</div>
+    </div>
   </div>
 </template>
 
-<style>
-#app {
-  height: 100%;
-  font-family: "微软雅黑";
-  width: 100%;
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
-  /* text-align: center;
-  color: #2c3e50; */
-}
-body,
-html {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  /* overflow: hidden; */
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  padding: 0;
-  margin: 0;
-}
-.return {
-  position: absolute;
-  top: 2.9rem;
-  left: 2rem;
-}
-.return img {
-  width: 2.7rem;
-  height: 2.7rem;
-}
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-/* .loading {
+<script>
+export default {
+  props: {
+    canSubTitle: {
+      type: Boolean,
+      default: false,
+    },
+    title: {
+      type: String,
+      default: "正在匹配",
+    },
+    subTitle: {
+      type: String,
+      default: "匹配结果可能需要10几秒 时间，请您耐心等待~",
+    },
+  },
+};
+</script>
+
+<style scoped>
+.loading {
   position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   z-index: 99999999;
@@ -101,5 +85,5 @@ p {
     padding: 0 .7rem;
     color: #fff;
     font-size: 1rem;
-} */
+}
 </style>

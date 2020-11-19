@@ -46,13 +46,16 @@
     <div class="return" @click="routerReturn">
       <img src="../assets/fanhui.png" alt="">
     </div>
+    <loading v-if="canLoading"></loading>
   </div>
 </template>
 
 <script>
 export default {
   data(){
-    return{}
+    return{
+      canLoading:false
+    }
   },
   methods:{
     routerReturn(){
@@ -64,6 +67,10 @@ export default {
     goListInfo(){
       this.$router.push('/ListInfo')
     }
+  },
+  created(){
+    // let data = 
+    console.log(this.$route.query);
   }
 };
 </script>
